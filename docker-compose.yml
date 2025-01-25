@@ -45,7 +45,7 @@ services:
     build: ./embedding-service
     ports:
       - "8000:8000"
-    env_file: .env
+    env_file: ./embedding-service/.env
     volumes:
       - huggingface_cache:/root/.cache/huggingface/hub
 
