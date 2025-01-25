@@ -51,11 +51,6 @@ cd document-query-app
   cd backend
   ```
 - Configure the database connection in `application.properties`. (Optional if you want to use databases locally `[PostgreSQL and Qdrant]`).
-- Start the backend:
-  ```bash
-  ./mvnw spring-boot:run
-  ```
-  **Or simply use the Editor/IDE UI to run the application.**
 
 ### 3. FastAPI Setup
 - Navigate to the FastAPI directory:
@@ -66,10 +61,17 @@ cd document-query-app
   ```bash
   pip install -r requirements.txt
   ```
-- Run the server:
-  ```bash
-  uvicorn app.main:app --reload
-  ```
+
+### 4. Frontend Setup
+
+- Navigate to the frontend directory
+    ```bash
+    cd frontend 
+    ```
+- Install npm packages
+    ```bash
+    npm install
+    ```
 
 ### 4. Using Docker-Compose
 Alternatively, if you prefer to use the `docker-compose` method, follow these steps:
