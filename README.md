@@ -1,1 +1,1 @@
-<img src="./architecture-d2.svg" alt="Alt Text" width="200" />
+<img src="./architecture-d2.svg" alt="Alt Text" width="800" height="800" />
