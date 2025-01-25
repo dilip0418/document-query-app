@@ -139,6 +139,7 @@ MISTRAL_API_KEY=<MISTRALAI-API-KEY>
 - Transform the application to support multiple users with secure authentication.
 - Introduce chat history storage, enabling users to resume previous sessions.
 - Explore multi-modality using vision models to extract tables, images, and complex document elements.
+- Minimizing LLM hallucination and better context management by incorporating `Graph Database` (ex: `neo4j`)
 
 ## Contributing
 I warmly welcome collaborations! Whether you're interested in improving the app, suggesting features, or reporting issues, I'd love to have your input. Feel free to get in touch via the following platforms:
