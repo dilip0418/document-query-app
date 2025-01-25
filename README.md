@@ -5,7 +5,7 @@ DocQry is a web-based application that lets you interact with your documents usi
 
 ## Demo
 ### Video Demo
-[![Watch the video](./readme_assets/DocQry_Thumbnail.gif)](./readme_assets/DocQry_Demo.mp4)
+[![Watch the video](./readme_assets/DocQry_Thumbnail.gif)](https://youtu.be/l8XgofiGveI?si=yRLlxq-2bQS6g8WR)
 
 ## Application Architecture
 ![Architecture Diagram](./readme_assets/architecture-d2.svg)
