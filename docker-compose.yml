@@ -1,0 +1,57 @@
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+      - qdrant
+      - embedding-service
+    env_file: ./backend/.env
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    env_file: ./frontend/.env
+
+  postgres:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: dilip
+      POSTGRES_PASSWORD: Sudheer@123
+      POSTGRES_DB: DocQry
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: [ "CMD", "pg_isready", "-U", "dilip", "-d", "DocQry" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
+  qdrant:
+    image: qdrant/qdrant:latest
+    ports:
+      - "6333:6333"
+      - "6334:6334"
+    volumes:
+      - qdrant-data:/qdrant/storage
+
+  embedding-service:
+    build: ./embedding-service
+    ports:
+      - "8000:8000"
+    env_file: .env
+    volumes:
+      - huggingface_cache:/root/.cache/huggingface/hub
+
+# name volumes managed by docker
+volumes:
+  postgres-data:
+  qdrant-data:
+  huggingface_cache:
+    driver: local

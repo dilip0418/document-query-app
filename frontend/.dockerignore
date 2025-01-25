@@ -1,0 +1,28 @@
+# Ignore node_modules (will be installed during build)
+node_modules/
+
+# Ignore build artifacts
+dist/
+
+# Ignore environment files (if not needed in the build)
+# .env
+# .env.local
+
+# Ignore temporary files
+*.log
+*.tmp
+*.swp
+*.swo
+
+# Ignore IDE and editor configuration files
+.idea/
+.vscode/
+*.iml
+
+# Ignore git-related files
+.git/
+.gitignore
+
+# Ignore operating system files
+.DS_Store
+Thumbs.db

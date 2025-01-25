@@ -1,0 +1,29 @@
+# curl -X POST "http://127.0.0.1:8000/generate-embeddings" \
+#      -H "Content-Type: application/json" \
+#      -d '{"texts": ["This is the first chunk.", "This is the second chunk."]}'
+
+# curl http://localhost:6333/collections
+
+# curl "http://localhost:6333/collections/documents"
+
+# POST http://localhost:8000/summarize-context HTTP/1.1
+# Content-Type: application/json
+
+# {
+#     "context": "In 2023, generic drugs played a critical role in the U.S. health care system.",
+#     "new_query": "How do generic drugs benefit patients?"
+# }
+
+
+POST http://localhost:8000/summarize-initial-context
+Content-Type: application/json
+
+{
+    "texts": [
+        "Chunk 1 text",
+        "Chunk 2 text",
+        "Chunk 3 text"
+    ]
+}
+
+

@@ -1,0 +1,25 @@
+# Ignore Maven/Gradle cache and temporary files
+target/
+*.iml
+*.class
+*.log
+
+# Ignore IDE and editor configuration files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Ignore operating system files
+.DS_Store
+Thumbs.db
+
+# Ignore environment files (if not needed in the build)
+# .env
+
+# Ignore git-related files
+.git/
+.gitignore
+
+# Ignore test outputs and temporary files
+test-output/
